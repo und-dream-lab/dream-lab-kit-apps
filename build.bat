@@ -44,7 +44,7 @@ if "%PACKAGE_VERSION%"=="" (
 )
 
 :: Rename the package
-set "TARGET_APP_NAME=dream-lab-composer-%PACKAGE_VERSION%.zip"
+set "TARGET_APP_NAME=dream-lab-composer-%PACKAGE_VERSION%.7z"
 echo Renaming the package to %TARGET_APP_NAME%
 ren "%PACKAGE_DIR%%ORIGINAL_PACKAGE_NAME%" "%TARGET_APP_NAME%" || (
     echo Error: Failed to rename the package

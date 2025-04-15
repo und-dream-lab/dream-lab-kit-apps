@@ -11,7 +11,7 @@ import_configs = [
 ]
 
 # Repository Name
-name = "kit-app-template"
+name = "dream-lab-kit-apps"
 
 [repo_build]
 # These are necessary to avoid a repo_build failure where the source/apps directory
@@ -103,7 +103,7 @@ archive_name = "${conf:repo.name}-fat"
 omniverse_flow_version_scheme=true
 package_per_config = true                   # By default we only build + package release.
 append_config = true                        # Set to true to append release/debug config to package name.
-archive_format = "zip"                      # We support "7z", "zip", "tar.gz", "tar.bz2"
+archive_format = "7z"                      # We support "7z", "zip", "tar.gz", "tar.bz2"
 windows_max_path_length = 0
 #build_version = "${file:${config_root}/tools/VERSION.md}"  # It's ignored when omniverse_flow_version_scheme is true
 
@@ -175,5 +175,3 @@ type_ordering = [
     "ApplicationTemplate",
     "ApplicationLayerTemplate",
 ]
-
-
