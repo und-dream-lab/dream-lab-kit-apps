@@ -6,7 +6,7 @@ set "PACKAGE_DIR=_build\packages\"
 :: Build and package
 echo ### Build and Package ###
 call repo build -x || exit /b 1
-call repo package || exit /b 1
+call repo package --name dream.lab.usd.composer --thin || exit /b 1
 
 :: Initialize the latest text file variable
 set "LATEST_TXT_FILE=EMPTY"
@@ -44,7 +44,7 @@ if "%PACKAGE_VERSION%"=="" (
 )
 
 :: Rename the package
-set "TARGET_APP_NAME=dream-lab-composer-%PACKAGE_VERSION%.7z"
+set "TARGET_APP_NAME=dream.lab.composer-%PACKAGE_VERSION%.7z"
 echo Renaming the package to %TARGET_APP_NAME%
 ren "%PACKAGE_DIR%%ORIGINAL_PACKAGE_NAME%" "%TARGET_APP_NAME%" || (
     echo Error: Failed to rename the package
